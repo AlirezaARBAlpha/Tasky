@@ -56,7 +56,7 @@ Powered by **TanStack Table**, featuring:
 ## 🚀 Tech Stack
 
 ### Core Framework
-- **Next.js 15 (App Router)** – Production-grade React framework
+- **Next.js 16 (App Router)** – Production-grade React framework
 - **TypeScript** – Type-safe, scalable architecture
 
 ### State Management
