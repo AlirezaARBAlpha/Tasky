@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Tasky – Simple Task Management Suite
 
-## Getting Started
+**Tasky** is a professional-grade task management application built with **Next.js 15 (App Router)**.  
+It is designed to deliver a **high-performance, accessible, and fully localized** experience for managing daily tasks.
 
-First, run the development server:
+With a strong focus on **UI/UX excellence**, Tasky supports a complete **bidirectional (RTL / LTR)** layout system and **persistent global state management**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌟 Key Features
+
+### 🌍 Full Internationalization (i18n)
+- Seamless language switching between **Persian (RTL)** and **English (LTR)**
+- Entire layout adapts dynamically, including:
+  - Sidebars
+  - Tables
+  - Typography direction
+
+### 🌓 Adaptive Theming
+- Premium **Dark / Light mode**
+- Powered by **next-themes**
+- Fully integrated with **Tailwind CSS** color tokens
+
+### 💾 Persistent State
+- Built with **Redux Toolkit** + **Redux Persist**
+- Automatically preserves:
+  - Tasks
+  - Language preference
+  - Theme selection  
+  even after refresh or browser restart
+
+### 🔒 Smart Middleware Protection
+- Custom **Next.js Middleware**
+- Acts as a security proxy
+- Protects private routes like:
+  - `/account`
+  - `/history`
+  - `/`
+- Prevents unauthenticated access
+
+### 📊 Interactive Data Tables
+Powered by **TanStack Table**, featuring:
+- Dynamic column rendering based on active language
+- Task status toggling with automatic re-sorting  
+  (completed tasks move to the bottom)
+- Fully responsive on mobile and desktop
+
+### ⚡ Optimized Performance
+- Uses **Next.js 15** optimizations:
+  - Automatic font optimization
+  - Image optimization
+  - Efficient server-side rendering logic
+
+---
+
+## 🚀 Tech Stack
+
+### Core Framework
+- **Next.js 15 (App Router)** – Production-grade React framework
+- **TypeScript** – Type-safe, scalable architecture
+
+### State Management
+- **Redux Toolkit** – Centralized global state
+- **Redux Persist** – State synchronization with `localStorage`
+
+### UI & Styling
+- **Tailwind CSS** – Utility-first styling
+- **shadcn/ui** – Accessible UI components (Radix UI)
+- **Lucide React** – Modern icon set
+- **Framer Motion** – Smooth animations & transitions
+
+### Tools & Utilities
+- **TanStack Table** – Headless table logic
+- **next-themes** – Theme management for Next.js
+- **js-cookie** – Cookie handling for middleware-based auth
+
+---
+
+## 📸 Screenshots
+
+### 🌐 Language & Theme Preview
+<div align="center" width="100%">
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/account-dark-theme.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/add-task.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/dark-theme.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/fa-accountpage.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/fa-rtl.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/lock-task.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/login.png" width=25% height=25%>
+  <img alt="App Screenshot" src="https://github.com/AlirezaARBAlpha/Tasky/blob/master/screenshot/unlock-task.png" width=25% height=25%>
+</div>
+
+---
+
+## 🏗 Project Structure
+
+```txt
+src/
+├── app/              # Next.js App Router (Pages, Layouts, Middleware)
+├── components/       # Reusable UI & Business Logic Components
+│   ├── auth/         # Login dialogs & route protection
+│   ├── ui/           # Base shadcn/ui components
+│   └── data-table/   # Table logic, columns & rendering
+├── hooks/            # Custom hooks (useTranslation, useAppDispatch, ...)
+├── lib/              # Redux store, slices & persist config
+├── locales/          # Localization dictionaries (fa.ts, en.ts)
+└── types/            # Shared TypeScript types & interfaces
+```
+## 🛠 Installation & Setup
+1.Clone the repository:
+```
+git clone [https://github.com/your-username/tasky.git](https://github.com/AlirezaARBAlpha/tasky.git)
+cd tasky
+```
+2.Install dependencies:
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.Run the development server:
+```
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4.Build for production:
+```
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👨‍💻 Developer
+Developed with passion by Alireza Borzouei.
 
-## Learn More
+GitHub: @AlirezaARBAlpha
 
-To learn more about Next.js, take a look at the following resources:
+LinkedIn: [Profile](https://www.linkedin.com/in/alireza-borzouei/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tasky - Organize your life, one task at a time.
