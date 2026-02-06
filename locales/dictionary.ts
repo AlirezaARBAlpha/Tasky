@@ -65,7 +65,7 @@ export const translations = {
   en: {
     account: {
       account_setting: "Account Setting",
-      profile: "profile",
+      profile: "Profile",
       change_picture: "Change Picture",
       username: "Username",
       danger_zone: "Danger Zone",

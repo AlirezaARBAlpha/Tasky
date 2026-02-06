@@ -49,12 +49,12 @@ export default function AccountPage() {
             
             <div className="grid gap-2">
               <Label htmlFor="username">{t.account.username}</Label>
-              <Input id="username" defaultValue="James_Webb" />
+              <Input id="username" defaultValue="Alireza" />
             </div>
             
             <div className="grid gap-2">
               <Label htmlFor="email">{t.account.email}</Label>
-              <Input id="email" defaultValue="james@example.com" disabled />
+              <Input id="email" defaultValue="example@example.com" disabled />
             </div>
           </CardContent>
           <CardFooter>
