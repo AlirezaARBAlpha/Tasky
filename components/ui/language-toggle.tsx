@@ -27,8 +27,8 @@ export function LanguageToggle() {
             <DropdownMenuContent>
                 <DropdownMenuGroup>
                 <DropdownMenuLabel>Language</DropdownMenuLabel>
-                <DropdownMenuItem onClick={() => dispatch(toggleLanguage())}>English</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => dispatch(toggleLanguage())}>فارسی</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => dispatch(toggleLanguage("en"))}>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => dispatch(toggleLanguage("fa"))}>فارسی</DropdownMenuItem>
                 </DropdownMenuGroup>
             </DropdownMenuContent>
         </DropdownMenu>

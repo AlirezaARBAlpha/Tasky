@@ -30,9 +30,9 @@ export const authSlice = createSlice({
       state.isAuthenticated = false;
       Cookies.remove('auth_token');
     },
-    toggleLanguage: (state) => {
-      state.lang = state.lang === "fa" ? "en" : "fa";
-      state.dir = state.lang === "fa" ? "rtl" : "ltr";
+    toggleLanguage: (state, action: PayloadAction<"en" | "fa">) => {
+      state.lang = action.payload;
+      state.dir = action.payload === "fa" ? "rtl" : "ltr";
     },
     setLanguage: (state, action: PayloadAction<"en" | "fa">) => {
       state.lang = action.payload;
