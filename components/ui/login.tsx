@@ -55,7 +55,7 @@ export function LoginDialog() {
           <DialogHeader>
             <DialogTitle>{t.sidebar.welcome}</DialogTitle>
             <DialogDescription>
-             {t.sidebar.log_in_to_your_account}
+             {t.sidebar.login_your_account}
             </DialogDescription>
           </DialogHeader>
 
